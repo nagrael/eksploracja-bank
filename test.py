@@ -1,4 +1,5 @@
 import math
+import scipy
 from collections import Counter
 from time import time
 
@@ -103,7 +104,7 @@ indicator_name2 = ['International migrant stock, total',
 
 
 # df.fillna(0, inplace=True)
-
+scipy.special.binom
 def distance_matrix(X, f='correlation'):
     return pdist(X, metric=f)
 
@@ -204,9 +205,6 @@ dendrogram(dist, labels=name_list, leaf_font_size=10)
 
 plt.show()
 tmp = fcluster(dist, t=0.4)
-# res = DBSCAN(metric='precomputed', eps=0.2, min_samples=3).fit(squareform(result))
-# uniq = len(set(res.labels_))
-# print(uniq)
 print(name_list)
 colors = [plt.cm.Spectral(each)
           for each in np.linspace(0, 1, len(tmp))]
